@@ -26,7 +26,7 @@ IsaMeidan = ['Isä meidän, joka olet taivaissa.',
             'Äläkä saata meitä kiusaukseen,',
             'vaan päästä meidät pahasta.',
             'Sillä sinun on valtakunta ja voima ja kunnia iankaikkisesti.',
-            'Aamen.']
+            '<:Vilkuttava_Kaataja:842673621456388106> Aamen. <:Vilkuttava_Kaataja2:842673923535405058>']
 
 @client.event
 async def on_ready():
@@ -48,9 +48,9 @@ async def on_message(message):
 
         await message.channel.send('Samoin!')
         print(scrape())
-    if message.content == 'lue raamattua' :
+    if (message.content == 'lue raamattua' or message.content == 'Lue raamattua'):
 
-        await message.channel.send(scrape())
+        await message.channel.send("<:Vilkuttava_Kaataja:842673621456388106>" + scrape() + "<:Vilkuttava_Kaataja2:842673923535405058>")
         print(scrape())
     if message.content == 'rukoilkaamme':
         for i in range(len(IsaMeidan)):
